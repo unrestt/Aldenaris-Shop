@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Product } from "../types/productTypes";
 
 type Props = {
@@ -32,9 +33,9 @@ const ProductItem = ({ product }: Props) => {
 
                 {/* Quick Action Overlay */}
                 <div className="absolute inset-x-0 bottom-0 p-4 translate-y-full opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 z-20">
-                    <button className="w-full py-4 bg-white text-black text-xs font-black uppercase tracking-[0.2em] hover:bg-neutral-200 transition-colors shadow-xl">
+                    <Link to={`/product/${product.id}`} className="block text-center w-full py-4 bg-white text-black text-xs font-black uppercase tracking-[0.2em] hover:bg-neutral-200 transition-colors shadow-xl">
                         Zobacz Produkt
-                    </button>
+                    </Link>
                 </div>
                 
                 {/* Gradient Overlay for better text readability if we had text over image, mostly for aesthetic here */}
