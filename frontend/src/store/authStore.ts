@@ -21,6 +21,6 @@ export const useAuthStore = create<AuthStore>()(
             setUser: (user) => set({ user }),
             logout: () => set({ user: null }),
         }),
-        { name: 'aldenaris-auth' } // zapisuje w localStorage
+        { name: 'aldenaris-auth' }
     )
 );

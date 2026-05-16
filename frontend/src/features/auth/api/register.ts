@@ -17,6 +17,7 @@ export const registerUser = async ({ username, email, password }: RegisterPayloa
     }
 
     const newUser = {
+        id: crypto.randomUUID(),
         username,
         email,
         password,

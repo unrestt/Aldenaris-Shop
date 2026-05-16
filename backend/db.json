@@ -5,19 +5,24 @@
       "username": "Bartek",
       "password": "123",
       "email": "bartek1234@gmail.com"
-    },
+    }
+  ],
+  "carts": [
     {
-      "username": "test",
-      "email": "bkutnik77@gmail.com",
-      "password": "123",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=test",
-      "bio": "",
-      "id": "ZMWmkn-"
+      "id": "1",
+      "userId": "1",
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 2,
+          "size": "XL"
+        }
+      ]
     }
   ],
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Carhartt Painter Hoodie Black",
       "brand": "Carhartt",
       "price": 709,
@@ -38,7 +43,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Carhartt Painter Hoodie Tobacco",
       "brand": "Carhartt",
       "price": 709,
@@ -59,7 +64,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Carhartt Painter Hoodie Navy",
       "brand": "Carhartt",
       "price": 709,
@@ -80,7 +85,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Satin Hoodie",
       "brand": "Supreme",
       "price": 1299,
@@ -102,7 +107,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "NOCTA Fleece CS Hoodie",
       "brand": "Nike",
       "price": 549,
@@ -122,7 +127,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Cracked Raglan Zip Hoodie",
       "brand": "Supreme",
       "price": 1399,
@@ -143,7 +148,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Ghostface Arc Hoodie",
       "brand": "Supreme",
       "price": 1699,
@@ -164,7 +169,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Ghostface Arc Hoodie",
       "brand": "Supreme",
       "price": 1699,
@@ -185,7 +190,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Cracked Raglan Zip Hoodie",
       "brand": "Supreme",
       "price": 1399,
@@ -207,7 +212,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "S Logo Zip Hoodie FW25",
       "brand": "Supreme",
       "price": 1649,
@@ -229,7 +234,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Alcatraz Hoodie",
       "brand": "Corteiz",
       "price": 1199,
@@ -249,7 +254,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Chinese Track Top 3.1 Jacket",
       "brand": "Adidas",
       "price": 1499,
@@ -270,7 +275,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Box Logo Hoodie",
       "brand": "Supreme",
       "price": 1499,
@@ -290,7 +295,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Box Logo Hoodie",
       "brand": "Supreme",
       "price": 1399,
@@ -310,7 +315,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Cactus Jack x Takashi Murakami Hollow Hoodie",
       "brand": "Travis Scott",
       "price": 1499,
@@ -331,7 +336,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "8BallÂ  Hoodie",
       "brand": "Stussy",
       "price": 1099,
@@ -352,7 +357,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Dice Hoodie",
       "brand": "Stussy",
       "price": 1099,
@@ -373,7 +378,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "New Multi Camo Baby Milo Hoodie",
       "brand": "Bape",
       "price": 1999,
@@ -395,7 +400,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Screen Camo Shark Hoodie",
       "brand": "Bape",
       "price": 1999,
@@ -417,7 +422,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Screen Shark Hoodie",
       "brand": "Bape",
       "price": 1999,
@@ -439,7 +444,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "New Multi Camo Rhinestone Crewneck",
       "brand": "Bape",
       "price": 1799,
@@ -459,7 +464,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Abc Camo 2nd Shark Hoodie",
       "brand": "Bape",
       "price": 1999,
@@ -481,7 +486,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Abc Camo 2nd Shark Hoodie",
       "brand": "Bape",
       "price": 1999,
@@ -503,7 +508,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Split Camo Shark Hoodie",
       "brand": "Bape",
       "price": 1999,
@@ -525,7 +530,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Abc Camo 2nd Shark Hoodie",
       "brand": "Bape",
       "price": 1999,
@@ -547,7 +552,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Split Camo Shark Hoodie",
       "brand": "Bape",
       "price": 1999,
@@ -569,7 +574,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Hyperdrive Chrome Hoodie",
       "brand": "Trapstar",
       "price": 550,
@@ -589,7 +594,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Satin Hoodie",
       "brand": "Supreme",
       "price": 1299,
@@ -611,7 +616,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "Satin Hoodie",
       "brand": "Supreme",
       "price": 1299,
@@ -632,7 +637,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "Plaid Arc Crewneck",
       "brand": "Supreme",
       "price": 1399,
@@ -653,7 +658,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 31,
+      "id": "31",
       "name": "Plaid Arc Crewneck",
       "brand": "Supreme",
       "price": 1399,
@@ -674,7 +679,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 32,
+      "id": "32",
       "name": "Plaid Arc Crewneck",
       "brand": "Supreme",
       "price": 1399,
@@ -694,7 +699,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 33,
+      "id": "33",
       "name": "Classic Logo Hoodie",
       "brand": "Supreme",
       "price": 1499,
@@ -715,7 +720,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 34,
+      "id": "34",
       "name": "Plaid Arc Crewneck",
       "brand": "Supreme",
       "price": 1399,
@@ -736,7 +741,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 35,
+      "id": "35",
       "name": "Scarface Friend Hoodie",
       "brand": "Supreme",
       "price": 1999,
@@ -757,7 +762,7 @@
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     },
     {
-      "id": 36,
+      "id": "36",
       "name": "COMME des GARĂ‡ONS \"Harold Hunter\" Box Logo Hoodie",
       "brand": "Supreme",
       "price": 2499,

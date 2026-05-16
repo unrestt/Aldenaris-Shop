@@ -5,6 +5,7 @@ import LoginModal from '../features/auth/components/LoginModal';
 import RegisterModal from '../features/auth/components/RegisterModal';
 import UserDetailsModal from '../features/auth/components/UserDetailsModal';
 import { useAuthStore } from '../store/authStore';
+import { ShoppingCart } from 'lucide-react'
 
 const NavBar = () => {
     const navigate = useNavigate();
@@ -49,20 +50,30 @@ const NavBar = () => {
                     {/* Auth Buttons */}
                     <div className="flex items-center gap-3">
                         {user ? (
-                            // Zalogowany — inicjały + nazwa → otwiera UserDetailsModal
-                            <button
-                                onClick={() => setUserDetailsOpen(true)}
-                                className="flex items-center gap-3 hover:opacity-80 transition-opacity group"
-                            >
-                                <div className="w-8 h-8 rounded-full border border-neutral-700 group-hover:border-neutral-400 transition-colors bg-neutral-800 flex items-center justify-center">
-                                    <span className="text-white text-[10px] font-black uppercase">
-                                        {user.username.charAt(0)}
+                            <>
+                                <button
+                                    onClick={() => setUserDetailsOpen(true)}
+                                    className="flex items-center gap-3 hover:opacity-80 transition-opacity group"
+                                >
+                                    <div className="w-8 h-8 rounded-full border border-neutral-700 group-hover:border-neutral-400 transition-colors bg-neutral-800 flex items-center justify-center">
+                                        <span className="text-white text-[10px] font-black uppercase">
+                                            {user.username.charAt(0)}
+                                        </span>
+                                    </div>
+                                    <span className="hidden md:block text-white text-[10px] font-bold uppercase tracking-widest">
+                                        {user.username}
                                     </span>
-                                </div>
-                                <span className="hidden md:block text-white text-[10px] font-bold uppercase tracking-widest">
-                                    {user.username}
-                                </span>
-                            </button>
+                                </button>
+                                <Link to={'/cart'}>
+                                    <div className="relative inline-block">
+                                        <ShoppingCart />
+                                        <span className='absolute -top-2 -right-3 flex h-5 w-5 p-2 items-center justify-center rounded-full bg-gray-600 text-xs font-bold text-white'>0</span>
+                                    </div>
+                                </Link>
+
+                            </>
+                            // Zalogowany — inicjały + nazwa → otwiera UserDetailsModal
+
                         ) : (
                             // Niezalogowany
                             <>
