@@ -5,9 +5,8 @@ export type User = {
     id: string;
     username: string;
     email: string;
-    avatar: string;
-    bio: string;
 };
+
 
 type AuthStore = {
     user: User | null;

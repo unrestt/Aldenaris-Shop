@@ -33,10 +33,8 @@ const UserDetailsModal = ({ isOpen, onClose }: Props) => {
             className={`fixed inset-0 z-[100] flex items-center justify-center transition-all duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
             onClick={onClose}
         >
-            {/* Backdrop */}
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
 
-            {/* Modal */}
             <div
                 className={`relative z-10 w-full max-w-md mx-4 bg-neutral-950 border border-neutral-800 transition-all duration-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
                 onClick={(e) => e.stopPropagation()}
@@ -55,38 +53,19 @@ const UserDetailsModal = ({ isOpen, onClose }: Props) => {
                         </button>
                     </div>
 
-                    {/* Avatar + Info */}
-                    <div className="flex flex-col items-center gap-4 mb-10">
-                        <div className="relative">
-                            <img
-                                src={user.avatar}
-                                alt={user.username}
-                                className="w-24 h-24 rounded-full border-2 border-neutral-700"
-                            />
-                            <div className="absolute inset-0 rounded-full ring-1 ring-white/10" />
-                        </div>
-                        <div className="text-center">
-                            <h2 className="text-white font-black text-2xl uppercase tracking-wide">
-                                {user.username}
-                            </h2>
-                            <p className="text-neutral-500 text-xs uppercase tracking-[0.2em] mt-1">
-                                {user.email}
-                            </p>
-                        </div>
+                    {/* User info */}
+                    <div className="mb-10">
+                        <h2 className="text-white font-black text-3xl uppercase tracking-wide leading-tight">
+                            {user.username}
+                        </h2>
+                        <p className="text-neutral-500 text-xs uppercase tracking-[0.2em] mt-2">
+                            {user.email}
+                        </p>
                     </div>
 
-                    {/* Divider */}
-                    <div className="h-px w-full bg-neutral-800 mb-6" />
+                    <div className="h-px w-full bg-neutral-800 mb-8" />
 
-                    {/* Bio */}
-                    {user.bio && (
-                        <div className="mb-6">
-                            <span className="text-neutral-500 text-[10px] font-bold uppercase tracking-widest block mb-2">Bio</span>
-                            <p className="text-neutral-300 text-sm leading-relaxed">{user.bio}</p>
-                        </div>
-                    )}
-
-                    {/* Stats row */}
+                    {/* Stats */}
                     <div className="grid grid-cols-2 gap-4 mb-8">
                         <div className="bg-neutral-900 border border-neutral-800 p-4 text-center">
                             <span className="text-white font-black text-xl block">0</span>

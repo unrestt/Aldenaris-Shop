@@ -1,73 +1,108 @@
-# React + TypeScript + Vite
+# 🪐 ALDENARIS Streetwear Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ALDENARIS to nowoczesna platforma e-commerce typu premium, dedykowana modzie ulicznej (streetwear). Projekt charakteryzuje się mroczną, luksusową estetyką, wysoką wydajnością oraz płynnym User Experience.
 
-Currently, two official plugins are available:
+![Aldenaris Header](https://via.placeholder.com/1200x400/0a0a0a/ffffff?text=ALDENARIS+STREETWEAR+PROJECT)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Kluczowe Funkcje
 
-## React Compiler
+- **Premium UI/UX**: Mroczny, minimalistyczny design z szerokim trackingiem i wysokim kontrastem.
+- **Dynamiczny Katalog**: Przeglądanie produktów z płynnymi efektami hover i animacjami.
+- **Szczegóły Produktu**: Pełna galeria zdjęć, wybór rozmiaru, kontrola ilości i inteligentny system cache'owania.
+- **System Autentykacji**: Logowanie i rejestracja zintegrowane z globalnym stanem (Zustand).
+- **Persystencja Danych**: Stan zalogowanego użytkownika jest zapamiętywany po odświeżeniu strony (localStorage).
+- **Inteligentna Nawigacja**: Płynne przewijanie do sekcji na stronie głównej oraz inteligentne powroty z widoków szczegółowych.
+- **Responsive Web Design**: Pełna optymalizacja dla urządzeń mobilnych, tabletów i desktopów.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📸 Screeny (Placeholders)
 
-## Expanding the ESLint configuration
+| Strona Główna | Detale Produktu | Logowanie |
+|---|---|---|
+| ![Home](https://via.placeholder.com/400x250/0a0a0a/ffffff?text=Katalog+Produktów) | ![Details](https://via.placeholder.com/400x250/0a0a0a/ffffff?text=Strona+Produktu) | ![Auth](https://via.placeholder.com/400x250/0a0a0a/ffffff?text=Panel+Użytkownika) |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Technologie i Biblioteki
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Frontend
+- **React 19** + **TypeScript**: Solidna podstawa typowana.
+- **Vite**: Ultra-szybki bundler i środowisko deweloperskie.
+- **Tailwind CSS v4**: Najnowocześniejsza wersja frameworka CSS do budowy UI.
+- **Zustand**: Lekkie i wydajne zarządzanie stanem globalnym (Auth, UI).
+- **TanStack Query (React Query) v5**: Zaawansowane zarządzanie danymi asynchronicznymi i cache'owaniem.
+- **React Router v7**: System routingu z obsługą dynamicznych ścieżek.
+- **Axios**: Klient HTTP do komunikacji z API.
+- **React Hot Toast**: Eleganckie powiadomienia systemowe.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Backend (Mock API)
+- **JSON Server**: Pełne, udawane API REST działające na pliku `db.json`.
+
+---
+
+## 🏗 Architektura Projektu
+
+Projekt podąża za zasadami **Feature-Sliced Design (FSD)** (uproszczonymi), co pozwala na łatwe skalowanie aplikacji.
+
+```
+src/
+├── api/              # Globalna konfiguracja axios (interceptory)
+├── assets/           # Statyczne zasoby (logo, ikony)
+├── features/         # Logika biznesowa podzielona na moduły
+│   ├── auth/         # Logowanie, Rejestracja, Store, Hooki
+│   └── products/     # Katalog, Detale, Hooki, API
+├── layout/           # Globalne komponenty strukturalne (NavBar, Footer)
+├── store/            # Globalne magazyny Zustand
+└── types/            # Globalne definicje typów TypeScript
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📡 Dokumentacja API
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Backend oparty jest o `json-server` uruchomiony na porcie `3001`.
+
+### Produkty
+- `GET /products` - Pobiera listę wszystkich produktów.
+- `GET /products/:id` - Pobiera szczegóły konkretnego produktu.
+
+### Użytkownicy
+- `GET /users?email=...&password=...` - Wykorzystywane do prostego logowania.
+- `POST /users` - Rejestracja nowego użytkownika.
+- `GET /users?email=...` - Sprawdzanie dostępności adresu email.
+
+---
+
+## ⚙️ Instalacja i Uruchomienie
+
+### 1. Klonowanie repozytorium
+```bash
+git clone https://github.com/twoj-profil/aldenaris-shop.git
+cd aldenaris-shop
 ```
+
+### 2. Uruchomienie Backend (Mock API)
+```bash
+cd backend
+npx json-server --watch db.json --port 3001
+```
+
+### 3. Uruchomienie Frontend
+W nowym oknie terminala:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## 📝 Do zrobienia (Future Enhancements)
+- [ ] Implementacja pełnego Koszyka Zakupowego.
+- [ ] Integracja z systemem płatności (Stripe/PayPal).
+- [ ] Panel Admina do zarządzania asortymentem.
+- [ ] Wielojęzyczność (i18next).
+- [ ] Tryb jasny (Light Mode).
+
+---
+
+🚀 **Aldenaris** - Streetwear of the future.

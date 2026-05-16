@@ -49,16 +49,16 @@ const NavBar = () => {
                     {/* Auth Buttons */}
                     <div className="flex items-center gap-3">
                         {user ? (
-                            // Zalogowany — kliknięcie otwiera UserDetailsModal
+                            // Zalogowany — inicjały + nazwa → otwiera UserDetailsModal
                             <button
                                 onClick={() => setUserDetailsOpen(true)}
                                 className="flex items-center gap-3 hover:opacity-80 transition-opacity group"
                             >
-                                <img
-                                    src={user.avatar}
-                                    alt={user.username}
-                                    className="w-8 h-8 rounded-full border border-neutral-700 group-hover:border-neutral-500 transition-colors"
-                                />
+                                <div className="w-8 h-8 rounded-full border border-neutral-700 group-hover:border-neutral-400 transition-colors bg-neutral-800 flex items-center justify-center">
+                                    <span className="text-white text-[10px] font-black uppercase">
+                                        {user.username.charAt(0)}
+                                    </span>
+                                </div>
                                 <span className="hidden md:block text-white text-[10px] font-bold uppercase tracking-widest">
                                     {user.username}
                                 </span>

@@ -20,8 +20,6 @@ export const registerUser = async ({ username, email, password }: RegisterPayloa
         username,
         email,
         password,
-        avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${username}`,
-        bio: '',
     };
 
     const { data } = await api.post<User>('/users', newUser);
