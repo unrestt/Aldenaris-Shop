@@ -1,4 +1,12 @@
 ﻿{
+    "users": [
+        {
+            "id": "1",
+            "username": "Bartek",
+            "password": "123",
+            "email": "..."
+        }
+    ],
     "products":  [
                      {
                          "id":  1,
