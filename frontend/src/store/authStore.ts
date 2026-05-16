@@ -1,17 +1,27 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 
-type User = { id: number; email: string; name: string; }
+export type User = {
+    id: string;
+    username: string;
+    email: string;
+    avatar: string;
+    bio: string;
+};
 
 type AuthStore = {
     user: User | null;
-    token: string | null;
-    setUser: (user: User, token: string) => void;
+    setUser: (user: User) => void;
     logout: () => void;
-}
+};
 
-export const useAuthStore = create<AuthStore>((set) => ({
-    user: null,
-    token: null,
-    setUser: (user, token) => set({ user, token }),
-    logout: () => set({ user: null, token: null }),
-}));
+export const useAuthStore = create<AuthStore>()(
+    persist(
+        (set) => ({
+            user: null,
+            setUser: (user) => set({ user }),
+            logout: () => set({ user: null }),
+        }),
+        { name: 'aldenaris-auth' } // zapisuje w localStorage
+    )
+);

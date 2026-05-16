@@ -1,19 +1,22 @@
 import { useState, useEffect } from 'react';
 import logoWhite from '../../../assets/aldenaris_logo_white.png';
-import { useLogin } from '../hooks/useLogin';
+import { useRegister } from '../hooks/useRegister';
 
 type Props = {
     isOpen: boolean;
     onClose: () => void;
-    onSwitchToRegister: () => void;
+    onSwitchToLogin: () => void;
 };
 
-const LoginModal = ({ isOpen, onClose, onSwitchToRegister }: Props) => {
+const RegisterModal = ({ isOpen, onClose, onSwitchToLogin }: Props) => {
+    const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
     const [isVisible, setIsVisible] = useState(false);
+    const [validationError, setValidationError] = useState('');
 
-    const { mutate: login, isPending } = useLogin(onClose);
+    const { mutate: register, isPending } = useRegister(onClose);
 
     useEffect(() => {
         if (isOpen) {
@@ -21,8 +24,11 @@ const LoginModal = ({ isOpen, onClose, onSwitchToRegister }: Props) => {
             setTimeout(() => setIsVisible(true), 10);
         } else {
             setIsVisible(false);
+            setValidationError('');
+            setUsername('');
             setEmail('');
             setPassword('');
+            setConfirmPassword('');
             document.body.style.overflow = '';
         }
         return () => { document.body.style.overflow = ''; };
@@ -32,7 +38,12 @@ const LoginModal = ({ isOpen, onClose, onSwitchToRegister }: Props) => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        login({ email, password });
+        if (password !== confirmPassword) {
+            setValidationError('Hasła nie są identyczne.');
+            return;
+        }
+        setValidationError('');
+        register({ username, email, password });
     };
 
     return (
@@ -60,11 +71,24 @@ const LoginModal = ({ isOpen, onClose, onSwitchToRegister }: Props) => {
                     </div>
 
                     <div className="mb-8">
-                        <h2 className="text-white font-black text-3xl uppercase tracking-wide leading-tight">Zaloguj się</h2>
-                        <p className="text-neutral-500 text-xs uppercase tracking-[0.2em] mt-2">Witaj z powrotem</p>
+                        <h2 className="text-white font-black text-3xl uppercase tracking-wide leading-tight">Rejestracja</h2>
+                        <p className="text-neutral-500 text-xs uppercase tracking-[0.2em] mt-2">Dołącz do Aldenaris</p>
                     </div>
 
                     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-1.5">
+                            <label className="text-neutral-400 text-[10px] font-bold uppercase tracking-widest">Nazwa użytkownika</label>
+                            <input
+                                type="text"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                placeholder="twoja_nazwa"
+                                required
+                                disabled={isPending}
+                                className="w-full bg-neutral-900 border border-neutral-800 text-white text-sm px-4 py-3.5 placeholder:text-neutral-600 focus:outline-none focus:border-neutral-600 transition-colors disabled:opacity-50"
+                            />
+                        </div>
+
                         <div className="flex flex-col gap-1.5">
                             <label className="text-neutral-400 text-[10px] font-bold uppercase tracking-widest">Email</label>
                             <input
@@ -91,12 +115,29 @@ const LoginModal = ({ isOpen, onClose, onSwitchToRegister }: Props) => {
                             />
                         </div>
 
+                        <div className="flex flex-col gap-1.5">
+                            <label className="text-neutral-400 text-[10px] font-bold uppercase tracking-widest">Potwierdź hasło</label>
+                            <input
+                                type="password"
+                                value={confirmPassword}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                placeholder="••••••••"
+                                required
+                                disabled={isPending}
+                                className={`w-full bg-neutral-900 border text-white text-sm px-4 py-3.5 placeholder:text-neutral-600 focus:outline-none transition-colors disabled:opacity-50 ${validationError ? 'border-red-500/60' : 'border-neutral-800 focus:border-neutral-600'}`}
+                            />
+                        </div>
+
+                        {validationError && (
+                            <p className="text-red-400 text-[10px] uppercase tracking-widest font-bold">⚠ {validationError}</p>
+                        )}
+
                         <button
                             type="submit"
                             disabled={isPending}
                             className="w-full py-4 bg-white text-black text-xs font-black uppercase tracking-[0.2em] hover:bg-neutral-200 transition-colors mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
                         >
-                            {isPending ? 'Logowanie...' : 'Zaloguj się'}
+                            {isPending ? 'Tworzenie konta...' : 'Utwórz konto'}
                         </button>
                     </form>
 
@@ -107,12 +148,12 @@ const LoginModal = ({ isOpen, onClose, onSwitchToRegister }: Props) => {
                     </div>
 
                     <p className="text-center text-neutral-500 text-xs tracking-widest">
-                        Nie masz konta?{' '}
+                        Masz już konto?{' '}
                         <button
-                            onClick={onSwitchToRegister}
+                            onClick={onSwitchToLogin}
                             className="text-white font-bold hover:text-neutral-300 transition-colors underline underline-offset-4 uppercase"
                         >
-                            Zarejestruj się
+                            Zaloguj się
                         </button>
                     </p>
                 </div>
@@ -123,4 +164,4 @@ const LoginModal = ({ isOpen, onClose, onSwitchToRegister }: Props) => {
     );
 };
 
-export default LoginModal;
+export default RegisterModal;

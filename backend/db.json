@@ -4,7 +4,7 @@
             "id": "1",
             "username": "Bartek",
             "password": "123",
-            "email": "..."
+            "email": "bartek1234@gmail.com"
         }
     ],
     "products":  [
@@ -771,4 +771,5 @@
                          "description":  "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
                      }
                  ]
+
 }
