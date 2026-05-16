@@ -5,6 +5,7 @@ import LoginModal from '../features/auth/components/LoginModal';
 import RegisterModal from '../features/auth/components/RegisterModal';
 import UserDetailsModal from '../features/auth/components/UserDetailsModal';
 import { useAuthStore } from '../store/authStore';
+import { useUserCart } from '../features/cart/hooks/useUserCart';
 import { ShoppingCart } from 'lucide-react'
 
 const NavBar = () => {
@@ -14,6 +15,9 @@ const NavBar = () => {
     const [registerOpen, setRegisterOpen] = useState(false);
     const [userDetailsOpen, setUserDetailsOpen] = useState(false);
     const { user } = useAuthStore();
+    const { data: cart } = useUserCart(user?.id);
+
+    const cartCount = cart?.items.reduce((sum, item) => sum + item.quantity, 0) || 0;
 
     const handleNavClick = (sectionId: string) => {
         if (location.pathname === '/') {
@@ -64,10 +68,14 @@ const NavBar = () => {
                                         {user.username}
                                     </span>
                                 </button>
-                                <Link to={'/cart'}>
+                                <Link to={'/cart'} className="ml-4 hover:text-white transition-colors">
                                     <div className="relative inline-block">
-                                        <ShoppingCart />
-                                        <span className='absolute -top-2 -right-3 flex h-5 w-5 p-2 items-center justify-center rounded-full bg-gray-600 text-xs font-bold text-white'>0</span>
+                                        <ShoppingCart size={20} />
+                                        {cartCount > 0 && (
+                                            <span className='absolute -top-2.5 -right-3 flex h-5 w-5 items-center justify-center rounded-full bg-white text-[10px] font-black text-black border border-black'>
+                                                {cartCount}
+                                            </span>
+                                        )}
                                     </div>
                                 </Link>
 
