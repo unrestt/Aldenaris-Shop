@@ -1,0 +1,442 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Carhartt Painter Hoodie Black",
+      "brand": "Carhartt",
+      "price": 709.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/05/Hooded-Painter-Jacket-black-1.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/05/Hooded-Painter-Jacket-black-2.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/05/Hooded-Painter-Jacket-black-1.webp"
+    },
+    {
+      "id": 2,
+      "name": "Carhartt Painter Hoodie Tobacco",
+      "brand": "Carhartt",
+      "price": 709.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/05/splat-hood-brown-1.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/05/splat-hood-brown-2.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/05/splat-hood-brown-1.webp"
+    },
+    {
+      "id": 3,
+      "name": "Carhartt Painter Hoodie Navy",
+      "brand": "Carhartt",
+      "price": 709.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/05/splat-hood-navy-1.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/05/splat-hood-navy-2.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/05/splat-hood-navy-1.webp"
+    },
+    {
+      "id": 4,
+      "name": "Satin Hoodie",
+      "brand": "Supreme",
+      "price": 1299.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/Satin-Applique-Hooded-Sweatshirt-Navy-.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/04/Satin-Applique-Hooded-Sweatshirt-Navy-v2.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/04/Satin-Applique-Hooded-Sweatshirt-Navy-v3.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/Satin-Applique-Hooded-Sweatshirt-Navy-.webp"
+    },
+    {
+      "id": 5,
+      "name": "NOCTA Fleece CS Hoodie",
+      "brand": "Nike",
+      "price": 549.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/05/nocta-cs-hoodie.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/05/nocta-cs-hoodie.webp"
+    },
+    {
+      "id": 6,
+      "name": "Cracked Raglan Zip Hoodie",
+      "brand": "Supreme",
+      "price": 1399.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/05/raghood-1.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/05/raghood-2.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/05/raghood-1.webp"
+    },
+    {
+      "id": 7,
+      "name": "Ghostface Arc Hoodie",
+      "brand": "Supreme",
+      "price": 1699.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/05/Supreme-Ghostface-Arc-Hooded-Sweatshirt-Ash-Black.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/05/Supreme-Ghostface-Arc-Hooded-Sweatshirt-Ash-Black-v2.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/05/Supreme-Ghostface-Arc-Hooded-Sweatshirt-Ash-Black.webp"
+    },
+    {
+      "id": 8,
+      "name": "Ghostface Arc Hoodie",
+      "brand": "Supreme",
+      "price": 1699.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/05/Supreme-Ghostface-Arc-Hooded-Sweatshirt-Ash-Grey.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/05/Supreme-Ghostface-Arc-Hooded-Sweatshirt-Ash-Grey-v2webp.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/05/Supreme-Ghostface-Arc-Hooded-Sweatshirt-Ash-Grey.webp"
+    },
+    {
+      "id": 9,
+      "name": "Cracked Raglan Zip Hoodie",
+      "brand": "Supreme",
+      "price": 1399.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/Cracked-Raglan-Zip-Up-Hooded-Sweatshirt.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/04/Cracked-Raglan-Zip-Up-Hooded-Sweatshirt-v2.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/04/Cracked-Raglan-Zip-Up-Hooded-Sweatshirt-v3.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/Cracked-Raglan-Zip-Up-Hooded-Sweatshirt.webp"
+    },
+    {
+      "id": 10,
+      "name": "S Logo Zip Hoodie FW25",
+      "brand": "Supreme",
+      "price": 1649.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2025/11/s-logo-black-hoodie-v1.webp",
+        "https://grailpoint.com/wp-content/uploads/2025/11/338886175-287357717-roma6-1-500x500.webp",
+        "https://grailpoint.com/wp-content/uploads/2025/11/s-logo-black-hoodie-v2.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2025/11/s-logo-black-hoodie-v1.webp"
+    },
+    {
+      "id": 11,
+      "name": "Alcatraz Hoodie",
+      "brand": "Corteiz",
+      "price": 1199.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/05/Corteiz-Alcatraz-Hoodie-BlackGreen.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/05/Corteiz-Alcatraz-Hoodie-BlackGreen.webp"
+    },
+    {
+      "id": 12,
+      "name": "Chinese Track Top 3.1 Jacket",
+      "brand": "Adidas",
+      "price": 1499.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/05/adidas-CTT-Chinese-Track-Top-3.1-Jacket-Olive.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/05/adidas-CTT-Chinese-Track-Top-3.1-Jacket-Olive-v2.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/05/adidas-CTT-Chinese-Track-Top-3.1-Jacket-Olive.webp"
+    },
+    {
+      "id": 13,
+      "name": "Box Logo Hoodie",
+      "brand": "Supreme",
+      "price": 1499.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2025/12/supreme-boxlogo-pink-fw25.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2025/12/supreme-boxlogo-pink-fw25.webp"
+    },
+    {
+      "id": 14,
+      "name": "Box Logo Hoodie",
+      "brand": "Supreme",
+      "price": 1399.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2025/12/supreme-boxlogo-white-fw25.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2025/12/supreme-boxlogo-white-fw25.webp"
+    },
+    {
+      "id": 15,
+      "name": "Cactus Jack x Takashi Murakami Hollow Hoodie",
+      "brand": "Travis Scott",
+      "price": 1499.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/05/Travis-Scott-Cactus-Jack-x-Takashi-Murakami-Hollow-Hoodie-Brown-v1.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/05/Travis-Scott-Cactus-Jack-x-Takashi-Murakami-Hollow-Hoodie-Brown-v2webp.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/05/Travis-Scott-Cactus-Jack-x-Takashi-Murakami-Hollow-Hoodie-Brown-v1.webp"
+    },
+    {
+      "id": 16,
+      "name": "8Ball  Hoodie",
+      "brand": "Stussy",
+      "price": 1099.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/01/8-ball-pigment-dyed-black-v2.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/01/8-ball-pigment-dyed-black-v1.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/01/8-ball-pigment-dyed-black-v2.webp"
+    },
+    {
+      "id": 17,
+      "name": "Dice Hoodie",
+      "brand": "Stussy",
+      "price": 1099.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2025/05/stussy-dice-hoodie-white-back.webp",
+        "https://grailpoint.com/wp-content/uploads/2025/05/stussy-dice-hoodie-white-front.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2025/05/stussy-dice-hoodie-white-back.webp"
+    },
+    {
+      "id": 18,
+      "name": "New Multi Camo Baby Milo Hoodie",
+      "brand": "Bape",
+      "price": 1999.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/002ZPM301301M_-1.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/002ZPM301301M_-2.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/002ZPM301301M_-3.png"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/002ZPM301301M_-1.png"
+    },
+    {
+      "id": 19,
+      "name": "Screen Camo Shark Hoodie",
+      "brand": "Bape",
+      "price": 1999.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301304M-v2.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301304M.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301304M-v3.png"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301304M-v2.png"
+    },
+    {
+      "id": 20,
+      "name": "Screen Shark Hoodie",
+      "brand": "Bape",
+      "price": 1999.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301304M-v5.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301304M-v4.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301304M-v6.png"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301304M-v5.png"
+    },
+    {
+      "id": 21,
+      "name": "New Multi Camo Rhinestone Crewneck",
+      "brand": "Bape",
+      "price": 1799.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/bape-crewneck.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/bape-crewneck.webp"
+    },
+    {
+      "id": 22,
+      "name": "Abc Camo 2nd Shark Hoodie",
+      "brand": "Bape",
+      "price": 1999.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301008M-v3.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301008M-v8.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301008M-v9.png"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301008M-v3.png"
+    },
+    {
+      "id": 23,
+      "name": "Abc Camo 2nd Shark Hoodie",
+      "brand": "Bape",
+      "price": 1999.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301008M-v2.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301008M.-v6.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301008M-v7.png"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301008M-v2.png"
+    },
+    {
+      "id": 24,
+      "name": "Split Camo Shark Hoodie",
+      "brand": "Bape",
+      "price": 1999.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301005M-v5.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301005M-v7.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301005M-v6.png"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301005M-v5.png"
+    },
+    {
+      "id": 25,
+      "name": "Abc Camo 2nd Shark Hoodie",
+      "brand": "Bape",
+      "price": 1999.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301008M-v1.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301008M-v4.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301008M-v5.png"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301008M-v1.png"
+    },
+    {
+      "id": 26,
+      "name": "Split Camo Shark Hoodie",
+      "brand": "Bape",
+      "price": 1999.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301005M-v2.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301005M.png",
+        "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301005M-v4.png"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/001ZPM301005M-v2.png"
+    },
+    {
+      "id": 27,
+      "name": "Hyperdrive Chrome Hoodie",
+      "brand": "Trapstar",
+      "price": 550.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/03/Hyperdrive-Chrome-Hoodie-Black.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/03/Hyperdrive-Chrome-Hoodie-Black.webp"
+    },
+    {
+      "id": 28,
+      "name": "Satin Hoodie",
+      "brand": "Supreme",
+      "price": 1299.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/Satin-Applique-Hooded-Sweatshirt-Camo.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/04/Satin-Applique-Hooded-Sweatshirt-Camo-v2.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/04/Satin-Applique-Hooded-Sweatshirt-Camo-v3.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/Satin-Applique-Hooded-Sweatshirt-Camo.webp"
+    },
+    {
+      "id": 29,
+      "name": "Satin Hoodie",
+      "brand": "Supreme",
+      "price": 1299.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/Satin-Applique-Hooded-Sweatshirt-Snow-Camo.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/04/Satin-Applique-Hooded-Sweatshirt-Snow-Camo-v2.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/Satin-Applique-Hooded-Sweatshirt-Snow-Camo.webp"
+    },
+    {
+      "id": 30,
+      "name": "Plaid Arc Crewneck",
+      "brand": "Supreme",
+      "price": 1399.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/Supreme-Plaid-Arc-Crewneck-Camo-.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/04/Supreme-Plaid-Arc-Crewneck-Camo-v2.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/Supreme-Plaid-Arc-Crewneck-Camo-.webp"
+    },
+    {
+      "id": 31,
+      "name": "Plaid Arc Crewneck",
+      "brand": "Supreme",
+      "price": 1399.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/Supreme-Plaid-Arc-Crewneck-Grey.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/04/Supreme-Plaid-Arc-Crewneck-Grey-v2webp.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/Supreme-Plaid-Arc-Crewneck-Grey.webp"
+    },
+    {
+      "id": 32,
+      "name": "Plaid Arc Crewneck",
+      "brand": "Supreme",
+      "price": 1399.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/Supreme-Plaid-Arc-Crewneck-Navy.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/Supreme-Plaid-Arc-Crewneck-Navy.webp"
+    },
+    {
+      "id": 33,
+      "name": "Classic Logo Hoodie",
+      "brand": "Supreme",
+      "price": 1499.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/sup-logo-v1.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/04/sup-logo-v2.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/sup-logo-v1.webp"
+    },
+    {
+      "id": 34,
+      "name": "Plaid Arc Crewneck",
+      "brand": "Supreme",
+      "price": 1399.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/supreme-crewneck-v1.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/04/supreme-crewneck-v2.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/supreme-crewneck-v1.webp"
+    },
+    {
+      "id": 35,
+      "name": "Scarface Friend Hoodie",
+      "brand": "Supreme",
+      "price": 1999.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/Supreme-Scarface-Friend-Hoodie-Black.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/04/Supreme-Scarface-Friend-Hoodie-Black-v2webp.webp"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/Supreme-Scarface-Friend-Hoodie-Black.webp"
+    },
+    {
+      "id": 36,
+      "name": "COMME des GARÇONS \"Harold Hunter\" Box Logo Hoodie",
+      "brand": "Supreme",
+      "price": 2499.0,
+      "category": "Bluzy",
+      "images": [
+        "https://grailpoint.com/wp-content/uploads/2026/04/cdg-bogo-v2.webp",
+        "https://grailpoint.com/wp-content/uploads/2026/04/cdg-bogo-v1.webp",
+        "https://grailpoint.com/wp-content/uploads/2025/10/Photo-55-500x500.jpg"
+      ],
+      "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/cdg-bogo-v2.webp"
+    }
+  ]
+}
