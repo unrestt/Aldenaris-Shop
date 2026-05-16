@@ -2,7 +2,7 @@
 
 ALDENARIS to nowoczesna platforma e-commerce typu premium, dedykowana modzie ulicznej (streetwear). Projekt charakteryzuje się mroczną, luksusową estetyką, wysoką wydajnością oraz płynnym User Experience.
 
-![Aldenaris Header](https://via.placeholder.com/1200x400/0a0a0a/ffffff?text=ALDENARIS+STREETWEAR+PROJECT)
+![Aldenaris Header](docs/logo.png)
 
 ## 🚀 Kluczowe Funkcje
 
@@ -16,9 +16,9 @@ ALDENARIS to nowoczesna platforma e-commerce typu premium, dedykowana modzie uli
 
 ## 📸 Screeny (Placeholders)
 
-| Strona Główna | Detale Produktu | Logowanie |
-|---|---|---|
-| ![Home](https://via.placeholder.com/400x250/0a0a0a/ffffff?text=Katalog+Produktów) | ![Details](https://via.placeholder.com/400x250/0a0a0a/ffffff?text=Strona+Produktu) | ![Auth](https://via.placeholder.com/400x250/0a0a0a/ffffff?text=Panel+Użytkownika) |
+| Strona Główna | Produkty | Detale Produktu | Logowanie |
+|---|---|---|---|
+| ![Home](docs/home_screen.png) | ![Products](docs/products_screen.png) | ![Details](docs/productdetails_screen.png) | ![Auth](docs/login_screen.png) |
 
 ---
 
