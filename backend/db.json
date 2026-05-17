@@ -11,13 +11,7 @@
     {
       "id": "1",
       "userId": "1",
-      "items": [
-        {
-          "productId": "1",
-          "quantity": 2,
-          "size": "XL"
-        }
-      ]
+      "items": []
     }
   ],
   "products": [

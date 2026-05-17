@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useAuthStore } from '../../../store/authStore';
+import { useUserCart } from '../../cart/hooks/useUserCart';
 
 type Props = {
     isOpen: boolean;
@@ -9,6 +10,9 @@ type Props = {
 const UserDetailsModal = ({ isOpen, onClose }: Props) => {
     const { user, logout } = useAuthStore();
     const [isVisible, setIsVisible] = useState(false);
+    const { data: cart } = useUserCart(user?.id);
+
+    const cartCount = cart?.items.reduce((sum, item) => sum + item.quantity, 0) || 0;
 
     useEffect(() => {
         if (isOpen) {
@@ -72,7 +76,7 @@ const UserDetailsModal = ({ isOpen, onClose }: Props) => {
                             <span className="text-neutral-500 text-[10px] uppercase tracking-widest mt-1 block">Zamówienia</span>
                         </div>
                         <div className="bg-neutral-900 border border-neutral-800 p-4 text-center">
-                            <span className="text-white font-black text-xl block">0</span>
+                            <span className="text-white font-black text-xl block">{cartCount}</span>
                             <span className="text-neutral-500 text-[10px] uppercase tracking-widest mt-1 block">W koszyku</span>
                         </div>
                     </div>

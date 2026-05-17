@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useAuthStore } from "../../../store/authStore";
 import { useUserCart } from "../hooks/useUserCart";
 import { useProducts } from "../../products/hooks/useProducts";
+import { useUpdateCart } from "../hooks/useUpdateCart";
 import NavBar from "../../../layout/NavBar";
 import Footer from "../../../layout/Footer";
 import CartItem from "./CartItem";
@@ -11,6 +12,7 @@ const CartPage = () => {
     const { user } = useAuthStore();
     const { data: cart, isLoading: isCartLoading, isError, error } = useUserCart(user?.id);
     const { data: products, isLoading: isProductsLoading } = useProducts();
+    const { mutate: updateCart } = useUpdateCart();
 
     const isLoading = isCartLoading || isProductsLoading;
 
@@ -65,13 +67,22 @@ const CartPage = () => {
     const total = subtotal + shipping;
 
     const handleUpdateQuantity = (id: string, size: string, delta: number) => {
-        console.log("Update quantity", { id, size, delta });
-        // Tu docelowo wywołanie mutacji API
+        if (!cart) return;
+        const updatedItems = cart.items.map(item => {
+            if (item.productId === id && item.size === size) {
+                return { ...item, quantity: item.quantity + delta };
+            }
+            return item;
+        });
+        updateCart({ cartId: cart.id, items: updatedItems });
     };
 
     const handleRemoveItem = (id: string, size: string) => {
-        console.log("Remove item", { id, size });
-        // Tu docelowo wywołanie mutacji API
+        if (!cart) return;
+        const updatedItems = cart.items.filter(
+            item => !(item.productId === id && item.size === size)
+        );
+        updateCart({ cartId: cart.id, items: updatedItems });
     };
 
     return (

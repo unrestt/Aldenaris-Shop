@@ -7,7 +7,6 @@ type LoginPayload = {
 };
 
 export const loginUser = async ({ email, password }: LoginPayload): Promise<User> => {
-    // json-server: filtrujemy po email i password
     const { data } = await api.get<User[]>('/users', {
         params: { email, password },
     });
