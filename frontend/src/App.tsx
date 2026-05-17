@@ -1,16 +1,16 @@
 import './App.css'
 import {Routes, Route} from 'react-router-dom'
-import {Toaster} from 'react-hot-toast'
 import MainLayout from './layout/MainLayout'
 import ProductDetails from './features/products/components/ProductDetails'
 import NavBar from './layout/NavBar'
 import Footer from './layout/Footer'
 import CartPage from './features/cart/components/CartPage'
+import { CustomToaster } from './components/CustomToaster'
 
 function App() {
   return (
     <>
-      <Toaster position='top-center' />
+      <CustomToaster/>
       <Routes>
         <Route path='/' element={<MainLayout/>} />
         <Route path='/product/:id' element={
