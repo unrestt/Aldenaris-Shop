@@ -6,6 +6,8 @@ import RegisterModal from '../features/auth/components/RegisterModal';
 import UserDetailsModal from '../features/auth/components/UserDetailsModal';
 import { useAuthStore } from '../store/authStore';
 import { useUserCart } from '../features/cart/hooks/useUserCart';
+import { useProducts } from '../features/products/hooks/useProducts';
+import MiniCart from '../features/cart/components/MiniCart';
 import { ShoppingCart } from 'lucide-react'
 
 const NavBar = () => {
@@ -16,6 +18,7 @@ const NavBar = () => {
     const [userDetailsOpen, setUserDetailsOpen] = useState(false);
     const { user } = useAuthStore();
     const { data: cart } = useUserCart(user?.id);
+    const { data: products } = useProducts();
 
     const cartCount = cart?.items.reduce((sum, item) => sum + item.quantity, 0) || 0;
 
@@ -68,16 +71,22 @@ const NavBar = () => {
                                         {user.username}
                                     </span>
                                 </button>
-                                <Link to={'/cart'} className="ml-4 hover:text-white transition-colors">
-                                    <div className="relative inline-block">
-                                        <ShoppingCart size={20} />
-                                        {cartCount > 0 && (
-                                            <span className='absolute -top-2.5 -right-3 flex h-5 w-5 items-center justify-center rounded-full bg-white text-[10px] font-black text-black border border-black'>
-                                                {cartCount}
-                                            </span>
-                                        )}
+                                <div className="relative group ml-4">
+                                    <Link to={'/cart'} className="hover:text-white transition-colors block py-2">
+                                        <div className="relative inline-block">
+                                            <ShoppingCart size={20} />
+                                            {cartCount > 0 && (
+                                                <span className='absolute -top-2.5 -right-3 flex h-5 w-5 items-center justify-center rounded-full bg-white text-[10px] font-black text-black border border-black'>
+                                                    {cartCount}
+                                                </span>
+                                            )}
+                                        </div>
+                                    </Link>
+                                    {/* Mini-Cart Hover Dropdown */}
+                                    <div className="absolute right-0 top-full pt-2 hidden group-hover:block z-50 animate-in fade-in slide-in-from-top-1 duration-200">
+                                        <MiniCart cart={cart} products={products} />
                                     </div>
-                                </Link>
+                                </div>
 
                             </>
                             // Zalogowany — inicjały + nazwa → otwiera UserDetailsModal
