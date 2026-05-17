@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useProduct } from "../hooks/useProduct";
+import { useAuthStore } from "../../../store/authStore";
+import toast from "react-hot-toast";
+import { useUserCart } from "../../cart/hooks/useUserCart";
+import { useUpdateCart } from "../../cart/hooks/useUpdateCart";
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -9,6 +13,10 @@ const ProductDetails = () => {
     const [selectedSize, setSelectedSize] = useState<string | null>(null);
     const [quantity, setQuantity] = useState<number>(1);
     const [mainImage, setMainImage] = useState<string | null>(null);
+
+    const { user } = useAuthStore();
+    const { data: cart } = useUserCart(user?.id);
+    const { mutate: updateCart } = useUpdateCart();
 
     if (isLoading) {
         return (
@@ -29,7 +37,7 @@ const ProductDetails = () => {
 
     // Default sizes fallback if none provided by API
     const availableSizes = product.sizes && product.sizes.length > 0 ? product.sizes : ['S', 'M', 'L', 'XL'];
-    
+
     // Prepare images array
     const allImages = product.images?.length > 0 ? product.images : (product.thumbnail ? [product.thumbnail] : []);
     const currentImage = mainImage || (allImages.length > 0 ? allImages[0] : null);
@@ -42,17 +50,54 @@ const ProductDetails = () => {
         }
     };
 
+    const handleAddProduct = () => {
+        if (!user) {
+            toast.error("Zaloguj się, aby dodać produkt do koszyka!");
+            return;
+        }
+        if (!selectedSize) {
+            toast.error("Wybierz rozmiar przed dodaniem do koszyka!");
+            return;
+        }
+        if (!cart) {
+            toast.error("Koszyk nie został jeszcze załadowany.");
+            return;
+        }
+
+        const existingItem = cart.items.find(
+            item => item.productId === product.id && item.size === selectedSize
+        );
+
+        let updatedItems;
+
+        if (existingItem) {
+            updatedItems = cart.items.map(item => {
+                if (item.productId === product.id && item.size === selectedSize) {
+                    return { ...item, quantity: item.quantity + quantity };
+                }
+                return item;
+            });
+        } else {
+            updatedItems = [
+                ...cart.items,
+                { productId: product.id, size: selectedSize, quantity }
+            ];
+        }
+
+        updateCart({ cartId: cart.id, items: updatedItems });
+    };
+
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
-                
+
                 {/* Left Column - Gallery */}
                 <div className="w-full lg:w-1/2 flex flex-col gap-4">
                     <div className="relative aspect-[4/5] w-full bg-neutral-900 border border-neutral-800/50 overflow-hidden group">
                         {currentImage ? (
-                            <img 
-                                src={currentImage} 
-                                alt={product.name} 
+                            <img
+                                src={currentImage}
+                                alt={product.name}
                                 className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                             />
                         ) : (
@@ -66,12 +111,12 @@ const ProductDetails = () => {
                             </span>
                         </div>
                     </div>
-                    
+
                     {/* Thumbnails */}
                     {allImages.length > 1 && (
                         <div className="grid grid-cols-4 gap-4">
                             {allImages.map((img, idx) => (
-                                <button 
+                                <button
                                     key={idx}
                                     onClick={() => setMainImage(img)}
                                     className={`aspect-square bg-neutral-900 border overflow-hidden transition-colors ${currentImage === img ? 'border-white' : 'border-neutral-800/50 hover:border-neutral-600'}`}
@@ -112,11 +157,10 @@ const ProductDetails = () => {
                                 <button
                                     key={size}
                                     onClick={() => setSelectedSize(size)}
-                                    className={`py-4 text-xs font-bold uppercase tracking-widest border transition-all ${
-                                        selectedSize === size 
-                                            ? 'bg-white text-black border-white' 
-                                            : 'bg-transparent text-white border-neutral-700 hover:border-white'
-                                    }`}
+                                    className={`py-4 text-xs font-bold uppercase tracking-widest border transition-all ${selectedSize === size
+                                        ? 'bg-white text-black border-white'
+                                        : 'bg-transparent text-white border-neutral-700 hover:border-white'
+                                        }`}
                                 >
                                     {size}
                                 </button>
@@ -127,23 +171,23 @@ const ProductDetails = () => {
                     {/* Quantity and Add to Cart */}
                     <div className="flex flex-col sm:flex-row gap-4 mb-12">
                         <div className="flex items-center border border-neutral-700 h-14 w-full sm:w-32 shrink-0">
-                            <button 
+                            <button
                                 onClick={() => handleQuantityChange('dec')}
                                 className="w-1/3 h-full flex items-center justify-center text-white hover:bg-neutral-800 transition-colors"
                             >
                                 -
                             </button>
                             <span className="w-1/3 text-center text-white text-sm font-bold">{quantity}</span>
-                            <button 
+                            <button
                                 onClick={() => handleQuantityChange('inc')}
                                 className="w-1/3 h-full flex items-center justify-center text-white hover:bg-neutral-800 transition-colors"
                             >
                                 +
                             </button>
                         </div>
-                        <button 
+                        <button
                             className="flex-1 h-14 bg-white text-black text-xs font-black uppercase tracking-[0.2em] hover:bg-neutral-200 transition-colors shadow-xl"
-                            onClick={() => console.log('Add to cart', { product, selectedSize, quantity })}
+                            onClick={handleAddProduct}
                         >
                             Dodaj do koszyka
                         </button>
@@ -156,7 +200,7 @@ const ProductDetails = () => {
                             {product.description || "Nieskazitelny design spotyka się z najwyższą jakością materiałów. Ten produkt to esencja nowoczesnego streetwearu, zaprojektowany z myślą o wytrzymałości i bezkompromisowym stylu. Idealny wybór dla tych, którzy cenią sobie oryginalność."}
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>

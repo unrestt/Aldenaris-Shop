@@ -11,7 +11,18 @@
     {
       "id": "1",
       "userId": "1",
-      "items": []
+      "items": [
+        {
+          "productId": "1",
+          "size": "S",
+          "quantity": 3
+        },
+        {
+          "productId": "1",
+          "size": "M",
+          "quantity": 1
+        }
+      ]
     }
   ],
   "products": [
