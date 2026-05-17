@@ -98,10 +98,8 @@ npm run dev
 
 ## 📝 Do zrobienia (Future Enhancements)
 - [ ] Implementacja pełnego Koszyka Zakupowego.
-- [ ] Integracja z systemem płatności (Stripe/PayPal).
 - [ ] Panel Admina do zarządzania asortymentem.
 - [ ] Wielojęzyczność (i18next).
-- [ ] Tryb jasny (Light Mode).
 
 ---
 
