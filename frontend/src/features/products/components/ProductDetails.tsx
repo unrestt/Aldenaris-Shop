@@ -5,6 +5,7 @@ import { useAuthStore } from "../../../store/authStore";
 import toast from "react-hot-toast";
 import { useUserCart } from "../../cart/hooks/useUserCart";
 import { useUpdateCart } from "../../cart/hooks/useUpdateCart";
+import { addItemToCart } from "../../cart/utils/cartHelpers";
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -64,25 +65,11 @@ const ProductDetails = () => {
             return;
         }
 
-        const existingItem = cart.items.find(
-            item => item.productId === product.id && item.size === selectedSize
-        );
-
-        let updatedItems;
-
-        if (existingItem) {
-            updatedItems = cart.items.map(item => {
-                if (item.productId === product.id && item.size === selectedSize) {
-                    return { ...item, quantity: item.quantity + quantity };
-                }
-                return item;
-            });
-        } else {
-            updatedItems = [
-                ...cart.items,
-                { productId: product.id, size: selectedSize, quantity }
-            ];
-        }
+        const updatedItems = addItemToCart(cart.items, {
+            productId: product.id,
+            size: selectedSize,
+            quantity
+        });
 
         updateCart({ cartId: cart.id, items: updatedItems });
     };

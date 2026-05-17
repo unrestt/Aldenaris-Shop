@@ -3,6 +3,11 @@ import { Trash2 } from "lucide-react";
 import type { UserCart } from "../types/cartTypes";
 import type { Product } from "../../products/types/productTypes";
 import { useUpdateCart } from "../hooks/useUpdateCart";
+import { 
+    getCartItemsWithDetails, 
+    calculateSubtotal, 
+    removeItemFromCart 
+} from "../utils/cartHelpers";
 
 type Props = {
     cart: UserCart | null | undefined;
@@ -12,20 +17,15 @@ type Props = {
 const MiniCart = ({ cart, products }: Props) => {
     const { mutate: updateCart } = useUpdateCart();
 
-    const cartItemsWithDetails = cart?.items.map(item => {
-        const product = products?.find(p => p.id === item.productId);
-        return { ...item, product };
-    }).filter(item => item.product) || [];
+    const cartItemsWithDetails = getCartItemsWithDetails(cart?.items, products);
 
-    const subtotal = cartItemsWithDetails.reduce((sum, item) => sum + (item.product?.price || 0) * item.quantity, 0);
+    const subtotal = calculateSubtotal(cartItemsWithDetails);
 
     const handleRemoveItem = (e: React.MouseEvent, id: string, size: string) => {
         e.preventDefault();
         e.stopPropagation();
         if (!cart) return;
-        const updatedItems = cart.items.filter(
-            item => !(item.productId === id && item.size === size)
-        );
+        const updatedItems = removeItemFromCart(cart.items, id, size);
         updateCart({ cartId: cart.id, items: updatedItems });
     };
 

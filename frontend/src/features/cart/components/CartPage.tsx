@@ -7,6 +7,13 @@ import NavBar from "../../../layout/NavBar";
 import Footer from "../../../layout/Footer";
 import CartItem from "./CartItem";
 import { ShoppingBag, ArrowLeft, CreditCard } from "lucide-react";
+import { 
+    getCartItemsWithDetails, 
+    calculateSubtotal, 
+    calculateShipping, 
+    removeItemFromCart, 
+    updateItemQuantity 
+} from "../utils/cartHelpers";
 
 const CartPage = () => {
     const { user } = useAuthStore();
@@ -57,31 +64,21 @@ const CartPage = () => {
         );
     }
 
-    const cartItemsWithDetails = cart?.items.map(item => {
-        const product = products?.find(p => p.id === item.productId);
-        return { ...item, product };
-    }).filter(item => item.product) || [];
+    const cartItemsWithDetails = getCartItemsWithDetails(cart?.items, products);
 
-    const subtotal = cartItemsWithDetails.reduce((sum, item) => sum + (item.product?.price || 0) * item.quantity, 0);
-    const shipping = subtotal > 0 ? 30 : 0;
+    const subtotal = calculateSubtotal(cartItemsWithDetails);
+    const shipping = calculateShipping(subtotal);
     const total = subtotal + shipping;
 
     const handleUpdateQuantity = (id: string, size: string, delta: number) => {
         if (!cart) return;
-        const updatedItems = cart.items.map(item => {
-            if (item.productId === id && item.size === size) {
-                return { ...item, quantity: item.quantity + delta };
-            }
-            return item;
-        });
+        const updatedItems = updateItemQuantity(cart.items, id, size, delta);
         updateCart({ cartId: cart.id, items: updatedItems });
     };
 
     const handleRemoveItem = (id: string, size: string) => {
         if (!cart) return;
-        const updatedItems = cart.items.filter(
-            item => !(item.productId === id && item.size === size)
-        );
+        const updatedItems = removeItemFromCart(cart.items, id, size);
         updateCart({ cartId: cart.id, items: updatedItems });
     };
 
