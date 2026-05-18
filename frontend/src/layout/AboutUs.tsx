@@ -1,4 +1,3 @@
-import React from 'react';
 import aboutVideo from '../assets/about.mp4';
 
 const AboutUs = () => {

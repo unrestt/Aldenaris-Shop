@@ -148,10 +148,17 @@ const CartPage = () => {
                                 </div>
                             </div>
 
-                            <button className="w-full py-5 bg-white text-black text-[10px] font-black uppercase tracking-[0.2em] hover:bg-neutral-200 transition-all flex items-center justify-center gap-3 shadow-xl hover:shadow-white/5 active:scale-[0.98]">
-                                <CreditCard size={16} />
-                                Przejdź do płatności
-                            </button>
+                            {cartItemsWithDetails.length > 0 ? (
+                                <Link to="/checkout" className="w-full py-5 bg-white text-black text-[10px] font-black uppercase tracking-[0.2em] hover:bg-neutral-200 transition-all flex items-center justify-center gap-3 shadow-xl hover:shadow-white/5 active:scale-[0.98]">
+                                    <CreditCard size={16} />
+                                    Przejdź do płatności
+                                </Link>
+                            ) : (
+                                <button disabled className="w-full py-5 bg-neutral-900 text-neutral-600 border border-neutral-850 text-[10px] font-black uppercase tracking-[0.2em] flex items-center justify-center gap-3 cursor-not-allowed">
+                                    <CreditCard size={16} />
+                                    Koszyk jest pusty
+                                </button>
+                            )}
 
                             <div className="mt-8 flex flex-col gap-4">
                                 <p className="text-neutral-600 text-[9px] uppercase tracking-widest leading-relaxed text-center">

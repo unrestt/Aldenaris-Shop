@@ -777,5 +777,50 @@
       ],
       "description": "Bluza wykonana z wysokiej jakosci materialu premium. Swobodny kroj zapewnia maksymalny komfort noszenia przez caly dzien. Limitowana edycja dostepna wylacznie w naszym sklepie."
     }
+  ],
+  "orders": [
+    {
+      "userId": "1",
+      "items": [
+        {
+          "productId": "1",
+          "name": "Carhartt Painter Hoodie Black",
+          "price": 709,
+          "quantity": 1,
+          "size": "S",
+          "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/05/Hooded-Painter-Jacket-black-1.webp"
+        },
+        {
+          "productId": "1",
+          "name": "Carhartt Painter Hoodie Black",
+          "price": 709,
+          "quantity": 1,
+          "size": "XS",
+          "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/05/Hooded-Painter-Jacket-black-1.webp"
+        },
+        {
+          "productId": "35",
+          "name": "Scarface Friend Hoodie",
+          "price": 1999,
+          "quantity": 4,
+          "size": "L",
+          "thumbnail": "https://grailpoint.com/wp-content/uploads/2026/04/Supreme-Scarface-Friend-Hoodie-Black.webp"
+        }
+      ],
+      "total": 9414,
+      "shipping": 0,
+      "shippingDetails": {
+        "fullName": "Bartosz Kutnik",
+        "email": "bartek1234@gmail.com",
+        "phone": "535779011",
+        "street": "Ograszka 43B",
+        "postalCode": "87-640",
+        "city": "Czernikowo"
+      },
+      "paymentMethod": "BLIK",
+      "date": "2026-05-18T17:58:40.107Z",
+      "status": "Opłacone",
+      "id": 1
+    }
   ]
 }

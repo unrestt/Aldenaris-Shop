@@ -1,4 +1,3 @@
-import React from 'react';
 import logoWhite from '../assets/aldenaris_logo_white.png';
 
 const Footer = () => {

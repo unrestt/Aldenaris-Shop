@@ -1,3 +1,20 @@
 {
-    "folder-color.pathColors": []
+    "folder-color.pathColors": [
+        {
+            "folderPath": "Aldenaris Shop\\frontend\\src\\features\\auth\\",
+            "color": "foldercolorizer.color_00afd7"
+        },
+        {
+            "folderPath": "Aldenaris Shop\\frontend\\src\\features\\cart\\",
+            "color": "foldercolorizer.color_00af00"
+        },
+        {
+            "folderPath": "Aldenaris Shop\\frontend\\src\\features\\orders\\types\\",
+            "color": "foldercolorizer.color_d78700"
+        },
+        {
+            "folderPath": "Aldenaris Shop\\frontend\\src\\features\\products\\",
+            "color": "foldercolorizer.color_d700af"
+        }
+    ]
 }

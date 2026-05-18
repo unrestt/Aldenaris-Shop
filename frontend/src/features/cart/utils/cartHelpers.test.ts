@@ -4,9 +4,9 @@ import {
     calculateShipping, 
     addItemToCart, 
     removeItemFromCart, 
-    updateItemQuantity,
-    CartItemWithProduct
+    updateItemQuantity
 } from "./cartHelpers";
+import type { CartItemWithProduct } from "./cartHelpers";
 import type { CartItem } from "../types/cartTypes";
 import type { Product } from "../../products/types/productTypes";
 

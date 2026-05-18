@@ -5,6 +5,8 @@ import ProductDetails from './features/products/components/ProductDetails'
 import NavBar from './layout/NavBar'
 import Footer from './layout/Footer'
 import CartPage from './features/cart/components/CartPage'
+import CheckoutPage from './features/orders/components/CheckoutPage'
+import OrderSuccessPage from './features/orders/components/OrderSuccessPage'
 import { CustomToaster } from './components/CustomToaster'
 import { ScrollToTop } from './components/ScrollToTop'
 
@@ -25,6 +27,8 @@ function App() {
           </div>
         } />
         <Route path='/cart' element={<CartPage />} />
+        <Route path='/checkout' element={<CheckoutPage />} />
+        <Route path='/order-success/:orderId' element={<OrderSuccessPage />} />
         <Route path="*" element={
           <div className="bg-neutral-950 min-h-screen text-white flex items-center justify-center text-sm uppercase tracking-widest font-bold">
             Strona nie istnieje

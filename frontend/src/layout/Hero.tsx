@@ -1,4 +1,3 @@
-import React from 'react';
 import heroVideo from '../assets/hero.mp4';
 
 const Hero = () => {
